@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Admin, Resource,fetchUtils} from "react-admin";
+import { UserList } from "./users";
+import { Posts, PostEdit, PostCreate } from "./posts";
+import PostIcon from '@mui/icons-material/Book';
+import UserIcon from '@mui/icons-material/Group';
+import Dashboard from "./Dashboard";
+import authProvider from "./authProvider";
+import dataProvider from "./dataProvider";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  return <Admin authProvider={authProvider} dashboard={Dashboard} dataProvider={dataProvider}>
+    <Resource name="users" list={UserList} icon={UserIcon} />
+    <Resource name="posts" list={Posts} icon={PostIcon} edit={PostEdit} create={PostCreate} />
+  </Admin>
 }
 
 export default App;

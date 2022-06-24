@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Post One",
+      "body": "This is Post One",
+      "publishedAt": "28-10-2002",
+      "userId": ""
+    },
+    {
+      "id": "2",
+      "title": "Post Two",
+      "body": "This is Post Two",
+      "publishedAt": "28-10-2002"
+    },
+    {
+      "id": "3",
+      "title": "Post Three",
+      "body": "This is Post Three",
+      "publishedAt": "28-10-2002"
+    },
+    {
+      "id": "Idk",
+      "userId": "0",
+      "title": "My Dream",
+      "body": "Getting 6 hrs of sleep daily."
+    }
+  ],
+  "users": [
+    {
+      "id": "0",
+      "name": "Harshil Jani",
+      "email": "harshiljani2002@gmail.com"
+    }
+  ]
+}
